@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>adBDetect</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+<div class="container" style="margin-top: 40px;">
+    <div class="jumbotron">
+        <h3 class="text-center">AdBlock :</h3>
+        <hr/>
+        <h4 class="text-muted text-center">OFF</h4>
+    </div>
+</div>
+<script type="text/javascript" src="js/adbdetect.js"></script>
+<script type="text/javascript">
+var adBD = adBDetect().setup({
+    debug:true,
+    setPage:'ad-detect.html',
+    wait:2000,
+});
+adBD.start();
+if(adBD.isDetected()) {
+    alert('AdBlock is Enabled!');
+}
+</script>
+</body>
+</html>
